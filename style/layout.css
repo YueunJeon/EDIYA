@@ -1,0 +1,41 @@
+/* 공통 홈 */
+body{
+  background-color: yellow;
+  display: flex;
+  flex-flow: column wrap;
+  min-height: 100vh;
+}
+
+body > * {
+  width:100%;
+}
+
+.app-header-container{
+  background-color: skyblue;
+}
+
+.app-main{
+  background-color: violet;
+  flex-grow: 1;
+}
+
+.app-footer-container{
+  background-color: silver;
+}
+
+/* 모바일 홈 */
+/* 최대 767px까지 */
+@media all and (max-width:768px){
+  body{
+    background-color: pink;
+  }
+}
+
+/* 데스크탑 홈 */
+/* 최소 768px부터 */
+@media all and (min-width:768px){
+  body{
+    background-color:lightgreen;
+    ;
+  }
+}
