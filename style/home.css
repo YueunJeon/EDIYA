@@ -3,78 +3,127 @@
 .ediya-recommend-container{
   background-color: #fff;
 }
-
 .ediya-recommend{
   background-color: #BAE5FB;
   text-align: center;
-  color: #14182c
+  color: #14182c;
 }
-
-/* home 이디야 추천 메뉴 영문 텍스트 */
 .ediya-recommend-text[lang="en"] {
   font-size: 2.5rem;
   font-weight: 100;
   margin: 0;
 }
-
 .ediya-recommend-text{
-  margin-top:15px;
-  margin-bottom: 0px;
+  font-size: 1.4rem;
 }
-
-/* home 이디야 추천 메뉴 영문 텍스트 내 강조 */
-.ediya-recommend-text[lang="en"] em {
-  /* display: block; */
-  font-size: 31px;
+.ediya-recommend-text .point-color{
+  font-size: 3.1rem;
   font-weight: 700;
   font-style: normal;
   color: #24388d;
 }
-/* home 이디야 추천 메뉴 영문 텍스트 아래 구분선 */
-.ediya-recommend-text[lang="en"]::after {
-  content: "";
-  display: block;
-  width: 40px;
-  border-top: 1px solid #000;
-  margin: 15px auto;
+.ediya-recommend-list{
+  position: relative;
+}
+.ediya-recommend-beverage{
+  position: absolute;
+}
+.go-menu{
+  border: 1px solid #24388D;
+  display: inline-block;
+  padding: 8px 24px;
+  color: #24388d;
+  font-weight: 700;
+  font-size: 1.4rem;
+  position: relative;
+  z-index: 10;
 }
 
-/* 모바일 홈 */
 @media all and (max-width: 768px){
+  /* 모바일 홈 */
   /* 모바일 추천음료 */
   .ediya-recommend-container{
     padding-bottom: 165px;
+    font-size: 20px;
   }
-
   .ediya-recommend{
-    /*padding: 2.625em 0 1.25em;*/
     padding: 42px 0 20px;
   }
-  
   .ediya-recommend-text .point-color{
     display: block;
   }
-
+  .ediya-recommend-text{
+    margin: 15px 0;
+  }
   .ediya-recommend-beverage:first-child{
     display: none;
   }
+  .ediya-recommend-beverage:last-child{
+   position: absolute;
+   width: 60%;
+   max-width: 225px;
+   max-height: 160px;
+   top: 35px;
+   left: 50%;
+   transform: translateX(-60%);
+  }
 }
-
-/* 데스크탑 홈 */
 @media all and (min-width: 768px){
+  /* 데스크탑 홈 */
   /* 데스크탑 추천음료 */
   .ediya-recommend-container{
     padding-bottom: 260px;
   }
-
   .ediya-recommend{
     padding: 50px 0 32px;
   }
-
-  .ediya-recommend-text{
+  .ediya-recommend-text[lang="en"]{
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+  }
+  .ediya-recommend-text{
+    margin: 30px 0;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1019px){
+  .ediya-recommend-list{
+    border-top: 2px solid red;
+    width: 740px;
+    margin: 0 auto;
+  }
+  .ediya-recommend-beverage:first-child{
+    top: -60px;
+    left: 50%;
+    transform: translateX(-120%);
+    width: 200px;
+  }
+  .ediya-recommend-beverage:last-child{
+    top: -30px;
+    left: 50%;
+    transform: translateX(25%);
+    width: 300px;
+    /* background-color: pink; */
+  }
+}
+
+
+
+@media all and (min-width: 1020px){
+  .ediya-recommend-list{
+    width: 1020px;
+    margin: 0 auto;
+  }
+  .ediya-recommend-beverage:first-child{
+    top: -107px;
+    left: ;
+    width: 306px;
+  }
+  .ediya-recommend-beverage:last-child{
+    top: -45px;
+    right: 0;
+    width: 457px;
+    /* background-color: pink; */
   }
 }
