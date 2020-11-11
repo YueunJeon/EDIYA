@@ -4,41 +4,32 @@ body{
   flex-flow: column wrap;
   min-height: 100vh;
 }
-
-body > * {
-  width:100%;
-}
-
 .app-main{
   flex-grow: 1;
   display: flex;
   flex-flow: row wrap;
 }
-
-.ediya-recommend-container, .ediya-section-container, .ediya-notice, .ediya-news{
+.ediya-recommend-container, 
+.ediya-section-container, 
+.ediya-notice, 
+.ediya-news{
   width: 100%;
 }
-
 .ediya-inform-container{
   display: flex;
   flex-flow: row wrap;
 }
 
-/* 모바일 홈 */
-
 /* 데스크탑 홈 */
-/* 최소 768px부터 */
-@media all and (min-width:768px){
+@media screen and (min-width: 768px){
   .ediya-section-container{
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row nowrap; 
     justify-content: center;
   }
-
   .ediya-youtube{
     width: 365px;
   }
-
   .ediya-inform-container{
     width: 375px;
   }
