@@ -1,0 +1,35 @@
+1. flex-grow는 flex 아이템일때만 사용가능, 1로 하면
+
+2. white-space: nowrap;
+줄바꿈 ㄴㄴ
+
+3. overflow: hidden;
+지정한 영역을 넘으면 숨겨라
+
+4. text-overflow: ellipsis;
+지정한 영역을 넘기면 ...로 대체
+반드시 한줄이어야 함 (white-space: nowrap; 로 개행금지 처리)
+
+5. 특수문자 ㅁ 한자로 하면 다른 운영체제에서 깨질 수도 있으니까 주의
+
+6. https://uid.gitbook.io/css-grid/css-grid-layout-module
+css grid 레이아웃
+
+7. https://caniuse.com/
+css 기능 중 지원되는 브라우저 확인
+
+8. https://autoprefixer.github.io/
+IE11 에서 css grid 사용하기
+
+9. https://css-tricks.com/css-grid-in-ie-css-grid-and-the-new-autoprefixer/
+IE에서 사용가능하게? 된다는 건가?
+
+10. 와 grid css 너무 좋다 진짜 너.무.좋.다.
+
+11. https://flexboxfroggy.com/#ko
+display: flex 연습할 수 있는 사이트
+
+12. header 태그를 쓰지 않고 div class에 header 라고 하면 얘가 header인지 모르잖아 그러면
+html에 role="banner"라고 해주면 header라고 인식함
+footer 는  role="contentinfo"
+이런 방법을 WAI-ARIA라고 부름

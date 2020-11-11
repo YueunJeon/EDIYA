@@ -1,0 +1,138 @@
+환경설정
+
+1. 크롬 설치
+ - 크롬 확장프로그램 설치
+   web developer
+   headingsMap
+   tota11y
+
+2. 비주얼 스투디오 설치
+  - 확장 프로그램 설치
+Korean Language Pack for Visual Studio Code
+Live Server
+Auto Complete Tag
+Auto Rename Tag
+vscode-icons
+Monokai-Contrast Theme
+
+3. 깃 설치 및 초기 설정
+   1) 깃 설치
+   2) vscode에 git bash 불러오기
+   3) 초기설정
+      git config --global user.name "깃아이디"
+      git config --global user.email 깃이메일
+   4) 설정이 잘 됐는지 확인
+      git config --list
+
+4. 깃 활용
+ - vscode에서 bash 터미널을 통해 폴더만들고 깃이랑 연결함
+ 1) mkdir 로 디렉토리 생성 후 디렉토리에 들어가서 git init 명령어 입력하면 깃이 관리하는 폴더가 됨
+ 2) git add 파일명
+    git에 commit 하기 위한 준비가 된 파일을 스테이지에 올림 (스테이징) 
+ 3) git commit -m "커밋메세지"
+    커밋하면서 메세지 남김
+ 4) git status
+    현재 폴더 내 파일들이 수정상태인지 커밋상태인지 등 확인
+ 4) git log
+    커밋이력 보기
+
+5. 깃 활용 2
+- add commit 은 내 로컬에 commit 한거고 원격에 반영하려면 push 해줘야 함
+- 원격에서 변경한건 pull 로 받을 수 있는데 강제로 merge 시킴
+
+6. 피그마 계정 생성 및 코드 다운로드
+
+7. 검색 최적화를 위해서는
+웹 표준을 지킴
+웹 접근성이 좋아야 하고
+모바일(반응형)이 제공되어야 함
+title에는 검색에 걸릴만한 걸 넣어주는 게 좋음
+
+8. <meta name="viewport" content="width=device-width, initial-scale=1.0">
+이 태그가 있어야 반응형이 제대로 적용됨
+픽셀이 아니라 물리적인 크기로 하라는 뜻이야!
+
+9. 반응형을 하기 위해서는
+유연한 그리드(Fluid Grid), 유연한 미디어(Responsive Media), 미디어 쿼리(Mediq Queries), 뷰포트(Viewport) 메타 태그
+
+10. 반응형 vs 적응형
+- cj-olive-networks 저장소에서 보고 정리
+
+11. 
+보통은 3단으로 구성 (헤더, 콘텐츠, 풋터)
+4단으로도 구성 (헤더 밑에 네비게이션 추가)
+
+우리는 3단으로 구성
+콘텐츠는 4단으로 나눔 (추천음료, 영상, 공지사항, 뉴스)
+ - 그런데 문제가 있따
+    데스크탑으로 볼 때는 ((영상), (공지사항, 뉴스))를 그룹으로 묶어야 함
+
+body
+  app-header-container
+    app-header
+이렇게 했는데 container는 전체를 덮고 있고 헤더만 디자인이 들어가기 때문
+
+헤더 밑에
+app-main-container (이렇게 어차피 app-main으로 덮을거기 때문에 굳이 안 만들었음)
+  app-main
+    ediya-recommend-container ( 하늘색 배경은 전체를 덮고 이 안의 콘텐츠는 전체로 퍼질 게 아니기 때문에 겉에 씌워줌)
+      ediya-recommend
+    /ediya-recommend-container
+    ediya-section-container
+      ediya-youtube
+      ediya-inform-container
+        ediya-notice
+        ediya-news
+      /ediya-inform-container
+    /ediya-section-container
+  /app-main
+
+콘텐츠 밑에
+app-footer-container
+  app-footer
+
+이런 구조로 되어있음!
+
+12. 
+피그마에서 폰트랑 bold인지 이런거 확인해보면 
+
+13.
+box-sizing: border-box; 은 padding과 border가 width에 포함됨
+
+14.
+font-size: 1.6rem;
+뷰포트에 따라 1.6배 해주는거야
+
+15.
+a img {
+  vertical-align: middle;
+}
+이미지와 이미지를 감싼 div 사이의 크기 차이(갭)을 없애기 위해 사용
+
+16. display: flex;
+div 가 옆으로 정렬 됨
+body 에 
+  display: flex;
+  flex-flow: row wrap;
+하면 순서대로 뿌릴 수 있고
+다 width : 100%로 하면 밑으로 떨어지면서 보임 (처음이랑 같아보이지만 유연해짐)
+order: -1; 속성을 주면 footer를 맨 위에 보이게 할 수도 있음
+
+17. min-height: 100vh;
+화면에 보이는 최소 높이가 100%라는 뜻
+
+18. align-items: stretch;
+요소들이 늘어나 있음
+align-items: flex-start; 로 하면 딱 맞게 맞춰짐
+
+19. flex-grow: 1;
+app-main 에 이 속성을 주면 헤더랑 풋터랑 빼고 나머지 높이를 다 얘한테 줌
+근데 body 에 
+   flex-flow: row wrap;
+가 아니라
+   flex-flow: column wrap;
+으로 줘야 함
+큰 디바이스에서는 유리한 방법
+
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+flex 관련 article 살펴보면 좋음!
